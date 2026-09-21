@@ -18,6 +18,7 @@ st.markdown("""
     .mapa-central { background-color: #F4ECF7; padding: 20px; border-radius: 10px; border: 2px dashed #8E44AD; text-align: center; font-weight: bold; font-size: 18px; color: #512E5F; margin-bottom: 20px;}
     .mediador-box { background-color: #EAFAF1; padding: 20px; border-radius: 10px; border-left: 6px solid #27AE60; margin-top: 15px; }
     .pratica-box { background-color: #FEF9E7; padding: 15px; border-radius: 8px; border-left: 5px solid #F39C12; margin-top: 12px; }
+    .protocolo-brasil { background-color: #FDEDEC; padding: 18px; border-radius: 8px; border-left: 5px solid #C0392B; margin-top: 15px; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -224,69 +225,86 @@ elif menu == "2. 🎯 Quiz Dinâmico (Até 5 Perguntas & Histórico)":
                 st.session_state.historico_respostas = []
                 st.rerun()
 
-# --- TÓPICO 3: PAINEL DE CONSULTA AOS AUTORES & MEDIADOR (COM ATUALIZAÇÃO CORRIGIDA) ---
+# --- TÓPICO 3: PAINEL DE CONSULTA AOS AUTORES & MEDIADOR (COM DEBATE E PROTOCOLOS DO BRASIL) ---
 elif menu == "3. ⚖️ Painel de Consulta aos Autores & Mediador":
     st.subheader("Pilar 3: Painel de Consulta Aprofundada e Mediação Clínica")
-    st.markdown("Insira uma situação clínica ou dúvida conceitual. O painel cruzará as perspectivas aprofundadas dos autores, trará diretrizes de **como agir** e concluirá com a avaliação do mediador.")
+    st.markdown("Insira uma demanda complexa (ex: ideação suicida, traços narcisistas severos, luto traumático). O painel exibirá um **debate cruzado aprofundado entre os autores**, diretrizes de **como agir** e os **protocolos oficiais de atendimento no Brasil** (CFP e Ministério da Saúde).")
 
-    # Usando uma chave dinâmica associada a um botão de envio para forçar a atualização correta
     with st.form(key="form_consulta_autores"):
         pergunta_usuario = st.text_input(
-            "Qual é a sua dúvida ou cenário clínico para análise do painel?", 
-            value="Como manejar um paciente que apresenta angústia persecutória severa e recusa o vínculo?"
+            "Qual é a demanda clínica crítica para análise cruzada e protocolos?", 
+            value="Manejo de paciente em crise com ideação suicida ativa e traços de personalidade narcisista grave resistindo ao vínculo."
         )
-        submit_button = st.form_submit_button(label="Consultar Painel Analítico e Mediador")
+        submit_button = st.form_submit_button(label="Executar Análise Crítica e Protocolos Nacionais")
 
-    # A lógica executa sempre que o formulário for submetido, capturando perfeitamente o novo texto
     if submit_button:
         st.markdown("---")
-        st.markdown(f"### 💬 Análise Coletiva para: *'{pergunta_usuario}'*")
+        st.markdown(f"### 💬 Debate Teórico Cruzado para: *'{pergunta_usuario}'*")
         
-        col_a, col_b = st.columns(2)
-        with col_a:
-            st.markdown("""
-            <div style="background-color:#F2F4F4; padding:15px; border-radius:8px; margin-bottom:12px;">
-                <strong>Sigmund Freud:</strong><br>
-                <em>"Analisaríamos a questão sob o eixo da neurose de defesa e da projeção. O paciente recusa o vínculo porque o material recalcado retorna sob forma persecutória, mobilizando defesas severas do Ego contra a angústia sinal."</em>
-            </div>
-            """, unsafe_allow_html=True)
-            st.markdown("""
-            <div style="background-color:#F2F4F4; padding:15px; border-radius:8px; margin-bottom:12px;">
-                <strong>Melanie Klein:</strong><br>
-                <em>"Trata-se de uma recaída franca na posição esquizo-paranoide. O objeto externo está sendo clivado e vivido como persecutório devido à projeção massiva de impulsos destrutivos."</em>
-            </div>
-            """, unsafe_allow_html=True)
-
-        with col_b:
-            st.markdown("""
-            <div style="background-color:#F2F4F4; padding:15px; border-radius:8px; margin-bottom:12px;">
-                <strong>Donald Winnicott:</strong><br>
-                <em>"Encaro isso como uma falha severa na sustentação ambiental originária. O paciente não suporta o vínculo porque o ambiente inicial foi falho, gerando um Falso Self defensivo."</em>
-            </div>
-            """, unsafe_allow_html=True)
-            st.markdown("""
-            <div style="background-color:#F2F4F4; padding:15px; border-radius:8px; margin-bottom:12px;">
-                <strong>Wilfred Bion:</strong><br>
-                <em>"Há um transbordamento maciço de elementos beta não metabolizados. O psiquismo do paciente está inundado de sensações brutas sem conseguir sonhá-las."</em>
-            </div>
-            """, unsafe_allow_html=True)
-
-        st.markdown(f"""
-        <div class="pratica-box">
-            <h3>🧭 Diretriz Prática: Como Agir Diante de "{pergunta_usuario[:30]}..."</h3>
-            <p><strong>Conduta Clínica Recomendada:</strong></p>
-            <ul>
-                <li><strong>Evite confrontações diretas:</strong> Não tente argumentar racionalmente contra conteúdos persecutórios em momentos de pico de angústia (Freud/Klein).</li>
-                <li><strong>Exerça continência pura (Holding & Reverie):</strong> Sustenha o clima emocional de forma estável e previsível, servindo como continente para o caos (Winnicott/Bion).</li>
-                <li><strong>Respeite o ritmo do sujeito:</strong> Valide a dor do isolamento defensivo antes de propor qualquer interpretação teórica aprofundada.</li>
-            </ul>
+        # Debates aprofundados interligados
+        st.markdown("""
+        <div style="background-color:#F8F9F9; padding:18px; border-radius:8px; margin-bottom:15px; border-left: 5px solid #5DADE2;">
+            <strong>Sigmund Freud abre o debate:</strong><br>
+            <em>"Sob a ótica econômica, a ideação suicida extrema revela um colapso drástico do Ego frente à tirania de um Superego sádico, que inverte a agressão original direcionada ao objeto para o próprio eu. No narcisismo, a libido retirada do mundo externo reverte-se hipertrofiadamente para o eu, tornando o sujeito extremamente vulnerável a feridas narcísicas catastróficas."</em>
         </div>
         """, unsafe_allow_html=True)
 
         st.markdown("""
+        <div style="background-color:#F8F9F9; padding:18px; border-radius:8px; margin-bottom:15px; border-left: 5px solid #AF7AC5;">
+            <strong>Melanie Klein complementa:</strong><br>
+            <em>"Concordo com Freud, mas acrescento que o ato ou a ameaça suicida muitas vezes carrega uma fantasia onipotente de destruição e controle do objeto persecutório — é uma forma de ataque sádico interno onde o paciente destrói o 'objeto mau' que ele sente habitar seu próprio corpo. Na estrutura narcisista, a posição esquizo-paranoide impera: o sujeito não tolera a dependência amorosa e prefere a aniquilação a reconhecer a gratidão ou a falha."</em>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div style="background-color:#F8F9F9; padding:18px; border-radius:8px; margin-bottom:15px; border-left: 5px solid #F5B041;">
+            <strong>Donald Winnicott pondera:</strong><br>
+            <em>"A teoria metapsicológica é preciosa, mas precisamos olhar para o ambiente e para o colapso do True Self. Um paciente narcisista em risco suicida está, na verdade, gritando pelo desespero de nunca ter tido um holding verdadeiro. Ele construiu uma armadura grandiosa porque o ambiente original exigiu perfeição, e agora que essa armadura racha, o vazio ameaça exterminá-lo."</em>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("""
+        <div style="background-color:#F8F9F9; padding:18px; border-radius:8px; margin-bottom:15px; border-left: 5px solid #48C9B0;">
+            <strong>Wilfred Bion e Jacques Lacan concluem o eixo teórico:</strong><br>
+            <em>"Bion: O paciente está inundado de elementos beta tóxicos sem conseguir sonhar a própria morte. Ele precisa que o analista funcione como continente absoluto. // Lacan: No narcisismo e na crise suicida, o sujeito está enredado na falha radical da metáfora paterna, buscando apagar a própria inscrição na cadeia do Outro através de um ato que tenta abolir a falta."</em>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # Diretrizes de Como Agir na Prática
+        st.markdown("""
+        <div class="pratica-box">
+            <h3>🧭 Diretriz Prática de Atendimento Clínico</h3>
+            <ul>
+                <li><strong>Validação sem complacência:</strong> Acolha o sofrimento absoluto sem julgar a grandiosidade defensiva do narcisismo (Winnicott).</li>
+                <li><strong>Investigação direta do risco:</strong> Em quadros de ideação suicida, pergunte de forma clara, firme e sem medo sobre planos, intenções e meios (quebrando o tabu).</li>
+                <li><strong>Construção de continente (Containment):</strong> Mantenha a modulação afetiva estável, agindo como a função alfa que metaboliza o pânico e o desespero do paciente.</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # Protocolos Oficiais do Brasil
+        st.markdown("""
+        <div class="protocolo-brasil">
+            <h3>🇧🇷 Protocolos Oficiais e Diretrizes Legais de Atendimento no Brasil (CFP / Ministério da Saúde)</h3>
+            <p><strong>1. Avaliação e Manejo de Risco de Suicídio (Ministério da Saúde / OMS):</strong></p>
+            <ul>
+                <li><strong>Classificação de Risco:</strong> Distinguir ideação passiva ("queria sumir") de ideação ativa com plano e meios letais estruturados.</li>
+                <li><strong>Apoio de Rede e Interdisciplinaridade:</strong> Casos de risco iminente exigem obrigatoriamente a construção de uma rede de salvaguarda (familiar responsável de confiança, acionamento de psiquiatra assistente para avaliação farmacológica de urgência).</li>
+                <li><strong>Quebra de Sigilo Justificada:</strong> Conforme o Código de Ética Profissional do Psicólogo (CFP, Resolução CFP nº 010/2005) e o Código Penal brasileiro, <em>o sigilo pode e deve ser rompido em situações de risco iminente de morte (como o suicídio)</em>, visando a preservação da vida do consulente através do contato com familiares ou serviços de emergência (SAMU - 192 / CAPS / CVV - 181/188).</li>
+            </ul>
+            <p><strong>2. Manejo de Transtornos Graves (Narcisismo Patológico / Estruturas Limítrofes):</strong></p>
+            <ul>
+                <li>Estabelecer contratos terapêuticos claros e limites firmes de setting (frequência, horários, responsabilização por faltas e limites de contato fora das sessões), protegendo o profissional contra manipulações transferenciais destrutivas.</li>
+                <li>Encaminhamento psiquiátrico imediato caso haja comorbidades com transtornos de humor graves ou surtos psicóticos secundários.</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # Conclusão do Mediador
+        st.markdown("""
         <div class="mediador-box">
-            <h3>⚖️ Conclusão do Mediador Psicanalítico (Síntese Avançada)</h3>
-            <p><strong>Avaliação do Especialista:</strong><br>
-            A convergência entre os autores demonstra que situações de alta complexidade clínica não se resolvem por imposição teórica, mas pela <strong>escuta enraizada na transferência e na continência</strong>. Enquanto Freud e Klein identificam a raiz do conflito estrutural, Winnicott e Bion fornecem o mapa de atuação prática para que o analista suporte o peso do sofrimento psíquico do paciente.</p>
+            <h3>⚖️ Conclusão do Mediador Psicanalítico</h3>
+            <p><strong>Síntese Crítica:</strong><br>
+            O manejo de demandas extremas no contexto clínico brasileiro exige do profissional uma postura que une a <strong>finura da escuta psicanalítica</strong> (compreendendo o sentido inconsciente e estrutural do sintoma) com o <strong>rigor técnico-legal dos protocolos de saúde pública</strong>. A psicanálise não anula a urgência da vida real; ao contrário, quando o sujeito está sob risco iminente, o analista deve transitar com maestria entre a continência transferenciais e a ativação firme da rede de proteção à vida prevista pelas normativas do país.</p>
         </div>
         """, unsafe_allow_html=True)
