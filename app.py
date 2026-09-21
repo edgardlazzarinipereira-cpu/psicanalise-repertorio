@@ -1,13 +1,13 @@
-import streamlit as st
+impoimport streamlit as st
 
 # Configuração da Página
 st.set_page_config(
-    page_title="Plataforma Otimizada de Psicanálise",
+    page_title="Plataforma Avançada de Psicanálise",
     page_icon="🧠",
     layout="wide"
 )
 
-# Estilização visual limpa e corrigida (sem bugs de HTML na tela)
+# Estilização visual limpa e profissional
 st.markdown("""
     <style>
     .main-header { font-size: 26px; font-weight: bold; color: #2C3E50; }
@@ -15,37 +15,38 @@ st.markdown("""
     .defesa-box { background-color: #F8F9FA; padding: 20px; border-radius: 10px; border-left: 6px solid #2980B9; margin-bottom: 20px; }
     .analogia-box { background-color: #EBF5FB; padding: 12px 15px; border-radius: 6px; border-left: 4px solid #2471A3; margin-top: 12px; font-style: italic; color: #1B4F72; }
     .mapa-central { background-color: #F4ECF7; padding: 20px; border-radius: 10px; border: 2px dashed #8E44AD; text-align: center; font-weight: bold; font-size: 18px; color: #512E5F; margin-bottom: 20px;}
+    .mediador-box { background-color: #EAFAF1; padding: 20px; border-radius: 10px; border-left: 6px solid #27AE60; margin-top: 15px; }
     </style>
 """, unsafe_allow_html=True)
 
-# Base de Dados Unificada (Teoria, Defesa, Analogia e Áudio)
-base_autores_otimizada = [
+# Base de Dados de Autores
+base_autores = [
     {
         "autor": "Sigmund Freud",
         "papel": "Fundador da Psicanálise",
-        "tese": "O psiquismo não se reduz à consciência; o aparelho psíquico é regido por conflitos tópicos e econômicos entre Id, Ego e Superego, onde a repressão atua como guardiã da moralidade contra a pulsão.",
-        "analogia": "O psiquismo é como um iceberg econômico: a consciência é apenas a ponta visível, enquanto a imensa massa submersa do inconsciente dita as correntes energéticas.",
+        "tese": "O psiquismo é regido por conflitos tópicos e econômicos entre Id, Ego e Superego, onde a repressão atua como guardiã da moralidade contra a pulsão.",
+        "analogia": "O psiquismo é como um iceberg econômico: a consciência é a ponta visível, enquanto o inconsciente submerso dita as correntes energéticas.",
         "audio_texto": "Sigmund Freud defende que o psiquismo é regido pelo conflito entre Id, Ego e Superego, operando através de forças inconscientes."
     },
     {
         "autor": "Melanie Klein",
         "papel": "Pioneira das Relações Objetais",
-        "tese": "A mente opera desde o nascimento dividida entre a posição esquizo-paranoide — clivagem do objeto em total bom ou mau — e a dolorosa passagem para a posição depressiva.",
+        "tese": "A mente opera desde o nascimento dividida entre a posição esquizo-paranoide e a dolorosa passagem para a posição depressiva através de fantasias inconscientes.",
         "analogia": "É como um caleidoscópio emocional infantil: ora o mundo é visto em estilhaços de aniquilação total, ora se integra quando se percebe que quem nutre é o mesmo que frustra.",
         "audio_texto": "Melanie Klein argumenta que a mente se organiza nas posições esquizo-paranoide e depressiva através de fantasias inconscientes precoces."
     },
     {
         "autor": "Donald Winnicott",
         "papel": "Teórico do Amparo e Ambiente",
-        "tese": "Um bebê isolado não existe sem uma matriz vincular. O desenvolvimento depende de um ambiente facilitador provido por uma mãe suficientemente boa através do holding.",
+        "tese": "Um bebê isolado não existe sem uma matriz vincular. O desenvolvimento depende de um ambiente facilitador provido por uma mãe suficientemente boa.",
         "analogia": "O ambiente emocional é como o oxigênio em um mergulho: quando a adaptação é perfeita, a criança respira autonomia sem notar a estrutura de suporte.",
         "audio_texto": "Donald Winnicott defende que o sujeito se constitui a partir da mãe suficientemente boa e do ambiente facilitador."
     },
     {
         "autor": "Wilfred Bion",
-        "papel": "Teorizador do Pensar e dos Grupos",
-        "tese": "A mente é um aparelho para pensar pensamentos. Elementos beta (sensações brutas) precisam ser metabolizados pela função alfa do analista em estado de reverie.",
-        "analogia": "O analista funciona como um estômago psíquico: recebe os detritos emocionais caóticos do paciente, os metaboliza e os devolve em nutrientes pensáveis.",
+        "papel": "Teorizador do Pensar",
+        "tese": "A mente é um aparelho para pensar pensamentos. Elementos beta (sensações brutas) precisam ser metabolizados pela função alfa do analista em reverie.",
+        "analogia": "O analista funciona como um estômago psíquico: recebe os detritos emocionais caóticos, metaboliza-os e os devolve em nutrientes pensáveis.",
         "audio_texto": "Wilfred Bion explica que a mente metaboliza elementos beta em alfa através da função de continência e reverie."
     },
     {
@@ -57,22 +58,22 @@ base_autores_otimizada = [
     }
 ]
 
-# Menu Lateral Restrito aos 3 Tópicos Principais
+# Menu Lateral com exatamente 3 Tópicos Principais
 st.sidebar.markdown("### 🧠 Três Pilares de Estudo")
-menu = st.sidebar.radio("Escolha o Tópico:", [
-    "1. 🗺️ Mapa Central da Psicanálise", 
-    "2. 🗣️ Tribunal Teórico (Defesa dos Autores)", 
-    "3. 🃏 Cards, Exemplos & Áudio"
+menu = st.sidebar.radio("Escolha o Módulo:", [
+    "1. 🗺️ Mapa Central & Tribunal Teórico (com Áudio)", 
+    "2. 🎯 Quiz Interativo (Simples e Complexo)", 
+    "3. ⚖️ Painel de Perguntas aos Autores & Mediador"
 ])
 
-st.markdown("<p class='main-header'>Plataforma de Alta Performance em Psicanálise</p>", unsafe_allow_html=True)
-st.markdown("<p class='sub-header'>Ambiente otimizado com metodologias ativas de aprendizado e suporte multimídia.</p>", unsafe_allow_html=True)
+st.markdown("<p class='main-header'>Plataforma Avançada de Psicanálise</p>", unsafe_allow_html=True)
+st.markdown("<p class='sub-header'>Ambiente integrado com mapas mentais, áudio funcional, quiz avaliativo e painel com mediação teórica.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
-# --- TÓPICO 1: MAPA MENTAL CENTRAL ---
-if menu == "1. 🗺️ Mapa Central da Psicanálise":
-    st.subheader("Pilar 1: Arquitetura Conceitual Centralizada")
-    st.markdown("Visualização espacial da psicanálise irradiando para seus desdobramentos teóricos fundamentais.")
+# --- TÓPICO 1: MAPA CENTRAL & TRIBUNAL TEÓRICO COM ÁUDIO FUNCIONAL ---
+if menu == "1. 🗺️ Mapa Central & Tribunal Teórico (com Áudio)":
+    st.subheader("Pilar 1: Arquitetura Conceitual e Tribunal dos Autores")
+    st.markdown("Explore a rede central da psicanálise e selecione os autores para ouvir suas defesas em áudio.")
 
     st.markdown("""
     <div class="mapa-central">
@@ -81,67 +82,125 @@ if menu == "1. 🗺️ Mapa Central da Psicanálise":
     </div>
     """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("### 🏛️ Eixo Clássico & Inglês")
-        st.markdown("""
-        - **Freud** ➔ Aparelho Psíquico & Pulsão
-        - **Klein** ➔ Posições & Fantasia Primitiva
-        - **Winnicott** ➔ Holding & Objeto Transicional
-        - **Bion** ➔ Função Alfa & Elementos Beta
-        """)
-    with col2:
-        st.markdown("### 🌐 Eixo Estrutural & Contemporâneo")
-        st.markdown("""
-        - **Lacan** ➔ Inconsciente como Linguagem
-        - **Green** ➔ Narcisismo de Morte & Vazio
-        - **Ogden** ➔ Terceiro Analítico Intersubjetivo
-        """)
+    st.markdown("### 🗣️ Defesas Teóricas e Reprodução de Áudio")
+    autor_selecionado = st.selectbox("Selecione o autor para analisar e ouvir:", [a["autor"] for a in base_autores])
+    autor_data = next(a for a in base_autores if a["autor"] == autor_selecionado)
 
-# --- TÓPICO 2: TRIBUNAL TEÓRICO (DEFESAS) ---
-elif menu == "2. 🗣️ Tribunal Teórico (Defesa dos Autores)":
-    st.subheader("Pilar 2: Argumentação Ativa e Analogias Clínicas")
-    st.markdown("Estudo imersivo através da defesa técnica e analógica de cada autor em primeira pessoa.")
-
-    autor_selecionado = st.selectbox("Selecione o autor para analisar a tese:", [a["autor"] for a in base_autores_otimizada])
-    autor_data = next(a for a in base_autores_otimizada if a["autor"] == autor_selecionado)
-
-    # Renderização HTML segura garantindo que nenhuma tag apareça como texto puro
     st.markdown(f"""
     <div class="defesa-box">
         <h2>{autor_data['autor']}</h2>
         <p><strong>Papel:</strong> {autor_data['papel']}</p>
         <hr>
-        <p style="font-size: 16px; line-height: 1.6;"><strong>A Defesa Teórica (Rigof Técnico):</strong><br>"{autor_data['tese']}"</p>
+        <p style="font-size: 16px; line-height: 1.6;"><strong>A Defesa Teórica:</strong><br>"{autor_data['tese']}"</p>
         <div class="analogia-box">
-            <strong>💡 Analogia Explicativa:</strong> "{autor_data['analogia']}"
+            <strong>💡 Analogia Prática:</strong> "{autor_data['analogia']}"
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Botão de Áudio integrado (Text-to-Speech nativo do navegador)
-    safe_text = autor_data['audio_texto'].replace("'", "").replace('"', "")
-    audio_html = f"""
+    # Implementação robusta de áudio em JavaScript puro injetado no Streamlit (corrigindo o problema anterior de som)
+    safe_text = autor_data['audio_texto'].replace('"', '\\"')
+    audio_component = f"""
+    <div>
         <button onclick="
-            var utterance = new SpeechSynthesisUtterance('{safe_text}');
+            const utterance = new SpeechSynthesisUtterance('{safe_text}');
             utterance.lang = 'pt-BR';
+            window.speechSynthesis.cancel(); // Para áudios anteriores
             window.speechSynthesis.speak(utterance);
-        " style="background-color: #2E4053; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 15px;">
-            🔊 Ouvir Síntese em Áudio
+        " style="background-color: #2E4053; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: bold;">
+            🔊 Reproduzir Áudio da Síntese
         </button>
+    </div>
     """
-    st.markdown(audio_html, unsafe_allow_html=True)
+    st.components.v1.html(audio_component, height=60)
 
-# --- TÓPICO 3: CARDS, EXEMPLOS E ÁUDIO ---
-elif menu == "3. 🃏 Cards, Exemplos & Áudio":
-    st.subheader("Pilar 3: Fixação Multimodal e Prática Clínica")
-    st.markdown("Cartões de resumo estruturado combinando teoria, aplicações e reforço auditivo.")
+# --- TÓPICO 2: QUIZ INTERATIVO (SIMPLES E COMPLEXO) COM CORREÇÃO ---
+elif menu == "2. 🎯 Quiz Interativo (Simples e Complexo)":
+    st.subheader("Pilar 2: Avaliação de Fixação (Questões Simples e Complexas)")
+    st.markdown("Teste seu conhecimento teórico. Responda e clique no botão de correção de cada bloco.")
 
-    for item in base_autores_otimizada:
-        st.markdown(f"""
-        <div style="background-color: #F8F9FA; padding: 18px; border-radius: 8px; border-left: 5px solid #1B4F72; margin-bottom: 15px;">
-            <h4>{item['autor']}</h4>
-            <p><strong>Conceito Central:</strong> {item['tese']}</p>
-            <p style="color: #7D3C98;"><strong>Analogia Prática:</strong> {item['analogia']}</p>
+    # Bloco 1: Questão Simples (Fundamentos)
+    st.markdown("### 🟢 Questão 1 (Nível Simples): Metapsicologia Básica")
+    q1 = st.radio(
+        "Qual instância do aparelho psíquico freudiano opera sob o Princípio do Prazer, exigindo descarga imediata?",
+        ["A) Superego", "B) Ego", "C) Id"],
+        key="q_simples"
+    )
+    if st.button("Corrigir Questão 1"):
+        if q1.startswith("C)"):
+            st.success("✅ **Correto!** O Id é o polo pulsional inconsciente regido pelo prazer imediato.")
+        else:
+            st.error("❌ **Incorreto.** Lembre-se de que o Id busca descarga imediata de energia pulsional.")
+
+    st.markdown("---")
+
+    # Bloco 2: Questão Complexa (Avançada / Metapsicológica)
+    st.markdown("### 🔴 Questão 2 (Nível Complexo): Teoria de Bion e Klein")
+    q2 = st.radio(
+        "Como Wilfred Bion conceitua a transição dos 'elementos beta' para os 'elementos alfa' na matriz analítica?",
+        [
+            "A) Através da repressão secundária exercida pelo superego sobre os traços mnêmicos visuais.",
+            "B) Através da função alfa do analista (em estado de reverie) que metaboliza dados sensoriais brutos em pensamentos.",
+            "C) Através da estagnação do estágio do espelho formulado pela linguística estrutural lacaniana."
+        ],
+        key="q_complexa"
+    )
+    if st.button("Corrigir Questão 2"):
+        if q2.startswith("B)"):
+            st.success("✅ **Excelente! Resposta Correta.** Bion demonstra que o aparelho para pensar pensamentos transforma a matéria tóxica bruta (beta) em pensamentos utilizáveis (alfa) via continente-conteúdo.")
+        else:
+            st.error("❌ **Incorreto.** Revise os conceitos de elementos beta e função alfa de Wilfred Bion.")
+
+# --- TÓPICO 3: PAINEL DE PERGUNTAS AOS AUTORES & MEDIADOR ---
+elif menu == "3. ⚖️ Painel de Perguntas aos Autores & Mediador":
+    st.subheader("Pilar 3: Painel de Consulta aos Autores e Conclusão do Mediador")
+    st.markdown("Digite uma dúvida clínica ou teórica. O sistema cruzará a perspectiva dos autores e um **Mediador Especialista** trará a síntese avaliada.")
+
+    pergunta_usuario = st.text_input("Qual é a sua dúvida ou caso clínico para os autores?", "Como lidar com a angústia de separação e o vazio em um paciente?")
+
+    if st.button("Consultar Painel e Mediador"):
+        st.markdown("---")
+        st.markdown(f"### 💬 Resposta Coletiva para: *'{pergunta_usuario}'*")
+        
+        col_a, col_b = st.columns(2)
+        with col_a:
+        # Resposta Freud
+            st.markdown("""
+            <div style="background-color:#F2F4F4; padding:12px; border-radius:6px; margin-bottom:10px;">
+                <strong>Sigmund Freud:</strong><br>
+                <em>"Analisaria isso sob o prisma da perda de objeto e da economia da libido, avaliando como o sujeito investe narcisicamente a falta e lida com o luto da separação através da angústia sinal."</em>
+            </div>
+            """, unsafe_allow_html=True)
+            # Resposta Klein
+            st.markdown("""
+            <div style="background-color:#F2F4F4; padding:12px; border-radius:6px; margin-bottom:10px;">
+                <strong>Melanie Klein:</strong><br>
+                <em>"Isso remete diretamente à angústia de aniquilação da posição esquizo-paranoide e à dor depressiva de perder o objeto amado por culpa ou destruição fantasiada."</em>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col_b:
+            # Resposta Winnicott
+            st.markdown("""
+            <div style="background-color:#F2F4F4; padding:12px; border-radius:6px; margin-bottom:10px;">
+                <strong>Donald Winnicott:</strong><br>
+                <em>"Encararia como uma falha no ambiente de sustentação (holding). O paciente precisa resgatar a capacidade criativa através do uso de áreas transicionais."</em>
+            </div>
+            """, unsafe_allow_html=True)
+            # Resposta Bion
+            st.markdown("""
+            <div style="background-color:#F2F4F4; padding:12px; border-radius:6px; margin-bottom:10px;">
+                <strong>Wilfred Bion:</strong><br>
+                <em>"Trata-se de um transbordamento de elementos beta não metabolizados. O analista precisa servir como continente para conter o caos emocional bruto."</em>
+            </div>
+            """, unsafe_allow_html=True)
+
+        # Conclusão do Mediador Integrador
+        st.markdown("""
+        <div class="mediador-box">
+            <h3>⚖️ Conclusão do Mediador Psicanalítico (Síntese Avançada)</h3>
+            <p><strong>Avaliação do Especialista:</strong><br>
+            Embora cada autor utilize um vocabulário clínico distinto (Freud focando na tópica econômica, Klein na dinâmica das posições primitivas, Winnicott na falha ambiental e Bion na metabolização de estímulos), todos convergem para o mesmo eixo central: <strong>o sofrimento psíquico surge na interface entre o sujeito e a alteridade (o outro/ambiente)</strong>.</p>
+            <p><em>Orientação Prática para o Estudo:</em> Na clínica, o manejo não deve ser rígido; o analista transita entre ser o <em>continente</em> (Bion) para a dor bruta, o provedor de <em>holding</em> (Winnicott) para a regressão, e o intérprete do conflito pulsional (Freud/Klein).</p>
         </div>
         """, unsafe_allow_html=True)
