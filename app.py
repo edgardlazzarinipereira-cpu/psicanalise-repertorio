@@ -1,4 +1,4 @@
-impoimport streamlit as st
+import streamlit as st
 
 # Configuração da Página
 st.set_page_config(
@@ -70,7 +70,7 @@ st.markdown("<p class='main-header'>Plataforma Avançada de Psicanálise</p>", u
 st.markdown("<p class='sub-header'>Ambiente integrado com mapas mentais, áudio funcional, quiz avaliativo e painel com mediação teórica.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
-# --- TÓPICO 1: MAPA CENTRAL & TRIBUNAL TEÓRICO COM ÁUDIO FUNCIONAL ---
+# --- TÓPICO 1: MAPA CENTRAL & TRIBUNAL TEÓRICO COM ÁUDIO ---
 if menu == "1. 🗺️ Mapa Central & Tribunal Teórico (com Áudio)":
     st.subheader("Pilar 1: Arquitetura Conceitual e Tribunal dos Autores")
     st.markdown("Explore a rede central da psicanálise e selecione os autores para ouvir suas defesas em áudio.")
@@ -98,14 +98,13 @@ if menu == "1. 🗺️ Mapa Central & Tribunal Teórico (com Áudio)":
     </div>
     """, unsafe_allow_html=True)
 
-    # Implementação robusta de áudio em JavaScript puro injetado no Streamlit (corrigindo o problema anterior de som)
     safe_text = autor_data['audio_texto'].replace('"', '\\"')
     audio_component = f"""
     <div>
         <button onclick="
             const utterance = new SpeechSynthesisUtterance('{safe_text}');
             utterance.lang = 'pt-BR';
-            window.speechSynthesis.cancel(); // Para áudios anteriores
+            window.speechSynthesis.cancel();
             window.speechSynthesis.speak(utterance);
         " style="background-color: #2E4053; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: bold;">
             🔊 Reproduzir Áudio da Síntese
@@ -119,7 +118,6 @@ elif menu == "2. 🎯 Quiz Interativo (Simples e Complexo)":
     st.subheader("Pilar 2: Avaliação de Fixação (Questões Simples e Complexas)")
     st.markdown("Teste seu conhecimento teórico. Responda e clique no botão de correção de cada bloco.")
 
-    # Bloco 1: Questão Simples (Fundamentos)
     st.markdown("### 🟢 Questão 1 (Nível Simples): Metapsicologia Básica")
     q1 = st.radio(
         "Qual instância do aparelho psíquico freudiano opera sob o Princípio do Prazer, exigindo descarga imediata?",
@@ -134,7 +132,6 @@ elif menu == "2. 🎯 Quiz Interativo (Simples e Complexo)":
 
     st.markdown("---")
 
-    # Bloco 2: Questão Complexa (Avançada / Metapsicológica)
     st.markdown("### 🔴 Questão 2 (Nível Complexo): Teoria de Bion e Klein")
     q2 = st.radio(
         "Como Wilfred Bion conceitua a transição dos 'elementos beta' para os 'elementos alfa' na matriz analítica?",
@@ -164,14 +161,12 @@ elif menu == "3. ⚖️ Painel de Perguntas aos Autores & Mediador":
         
         col_a, col_b = st.columns(2)
         with col_a:
-        # Resposta Freud
             st.markdown("""
             <div style="background-color:#F2F4F4; padding:12px; border-radius:6px; margin-bottom:10px;">
                 <strong>Sigmund Freud:</strong><br>
                 <em>"Analisaria isso sob o prisma da perda de objeto e da economia da libido, avaliando como o sujeito investe narcisicamente a falta e lida com o luto da separação através da angústia sinal."</em>
             </div>
             """, unsafe_allow_html=True)
-            # Resposta Klein
             st.markdown("""
             <div style="background-color:#F2F4F4; padding:12px; border-radius:6px; margin-bottom:10px;">
                 <strong>Melanie Klein:</strong><br>
@@ -180,14 +175,12 @@ elif menu == "3. ⚖️ Painel de Perguntas aos Autores & Mediador":
             """, unsafe_allow_html=True)
 
         with col_b:
-            # Resposta Winnicott
             st.markdown("""
             <div style="background-color:#F2F4F4; padding:12px; border-radius:6px; margin-bottom:10px;">
                 <strong>Donald Winnicott:</strong><br>
                 <em>"Encararia como uma falha no ambiente de sustentação (holding). O paciente precisa resgatar a capacidade criativa através do uso de áreas transicionais."</em>
             </div>
             """, unsafe_allow_html=True)
-            # Resposta Bion
             st.markdown("""
             <div style="background-color:#F2F4F4; padding:12px; border-radius:6px; margin-bottom:10px;">
                 <strong>Wilfred Bion:</strong><br>
@@ -195,7 +188,6 @@ elif menu == "3. ⚖️ Painel de Perguntas aos Autores & Mediador":
             </div>
             """, unsafe_allow_html=True)
 
-        # Conclusão do Mediador Integrador
         st.markdown("""
         <div class="mediador-box">
             <h3>⚖️ Conclusão do Mediador Psicanalítico (Síntese Avançada)</h3>
