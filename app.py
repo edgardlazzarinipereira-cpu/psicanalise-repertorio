@@ -27,14 +27,14 @@ base_autores = [
         "autor": "Sigmund Freud",
         "papel": "Fundador da Psicanálise",
         "tese": "O psiquismo humano não se reduz à consciência. O aparelho psíquico é estruturado em instâncias em perpétuo conflito econômico e tópico: o Id (pulsional), o Ego (mediador e defensivo) e o Superego (herdeiro da moral e da interdição). A repressão atua para afastar do consciente conteúdos intoleráveis, gerando formações substitutivas como os sintomas.",
-        "analogia": "O psiquismo é como uma grande empresa gerindo uma caldeira de alta pressão: o Id produz a energia bruta e o vapor sem hora para parar; o Superego é a auditoria rígida que aplica multas morais severas; e o Ego é o diretor estressado que tenta equilibrar as contas para a empresa não explodir na superfíci.",
+        "analogia": "O psiquismo é como uma grande empresa gerindo uma caldeira de alta pressão: o Id produz a energia bruta e o vapor sem hora para parar; o Superego é a auditoria rígida que aplica multas morais severas; e o Ego é o diretor estressado que tenta equilibrar as contas para a empresa não explodir na superfície.",
         "audio_texto": "Sigmund Freud explica que o psiquismo é regido pelo conflito permanente entre Id, Ego e Superego, onde o inconsciente direciona nossa vida através de repressões e pulsões."
     },
     {
         "autor": "Melanie Klein",
         "papel": "Pioneira das Relações Objetais",
         "tese": "A mente infantil opera desde o início em um cenário de intensos impulsos de vida e de morte. O bebê organiza suas experiências em duas posições fundamentais: a esquizo-paranoide, marcada pela clivagem (objeto totalmente bom versus totalmente mau) e angústia persecutória; e a posição depressiva, onde integra o objeto, reconhecendo que quem frustra é o mesmo que ama, inaugurando a culpa e o desejo de reparação.",
-        "analogia": "É como o mundo emocional de uma criança diante de um brinquedo complexo: ou ela o ama com adoração cega e o protege, ou, ao menor defeito, quer destruí-lo por completo, sem conseguir ver que o mesmo objeto possui qualidades boas e falhas simultaneamente.",
+        "analogia": "É como o mundo emocional de uma criança diante de um brinquedo complexo: ora o mundo é visto em estilhaços de aniquilação total, ora se integra quando se percebe que quem nutre é o mesmo que frustra.",
         "audio_texto": "Melanie Klein demonstra que a mente se organiza nas posições esquizo-paranoide e depressiva, lidando com clivagens, fantasias primitivas, culpa e reparação."
     },
     {
@@ -48,74 +48,74 @@ base_autores = [
         "autor": "Wilfred Bion",
         "papel": "Teorizador do Pensar e dos Grupos",
         "tese": "A mente é um aparelho concebido para pensar pensamentos. O ser humano nasce exposto a sensações e emoções brutas e indigestas — os elementos beta. Para que a mente se desenvolva, é imperativa a presença de um continente (função alfa do analista em estado de reverie) que acolha, metabolize e devolva esses elementos em uma forma pensável e metabolizada (elementos alfa).",
-        "analogia": "O analista atua como um sistema digestivo e metabolizador psíquico: ele recebe o lixo tóxico, o caos e o desespero bruto que o paciente despeja, processa essa carga com continência técnica e emocional, e a devolve em formato de nutrientes psíquicos que o paciente agora consegue digerir e usar.",
+        "analogia": "O analista funciona como um sistema digestivo e metabolizador psíquico: ele recebe os detritos emocionais caóticos, metaboliza-os e os devolve em nutrientes pensáveis.",
         "audio_texto": "Wilfred Bion defende que a mente metaboliza dados sensoriais brutos chamados elementos beta em pensamentos utilizáveis através da função alfa e da reverie do analista."
     },
     {
         "autor": "Jacques Lacan",
         "papel": "O Retorno a Freud (Estruturalista)",
         "tese": "O inconsciente é estruturado como uma linguagem. O sujeito humano constitui-se a partir da alteridade radical do Grande Outro, alienando-se na cadeia de significantes. O desejo não é uma necessidade biológica pura, mas sim o 'desejo do Outro', articulado nas malhas da metáfora e da metonímia ao longo dos registros Real, Simbólico e Imaginário.",
-        "analogia": "O ser humano é como um ator que entra em um palco onde o roteiro, o idioma, os figurinos e a história já foram redigidos muito antes de seu nascimento; nós acreditamos que escrevemos nossas próprias falas, mas somos rigorosamente falados pelas estruturas simbólicas da linguagem que nos precedem.",
+        "analogia": "O ser humano é como um ator que entra em um palco onde o roteiro e a língua já foram escritos antes dele; nós falamos a linguagem, mas somos falados por ela.",
         "audio_texto": "Jacques Lacan postula que o inconsciente é estruturado como uma linguagem e que o sujeito se constitui na ordem simbólica enredado pelo desejo do Outro."
     }
 ]
 
-# 2. Banco de Questões do Quiz (Simples e Complexas) para rotação (máximo 5 por rodada)
+# 2. Banco de Questões do Quiz
 banco_quiz_total = [
     {
         "nivel": "🟢 Simples",
         "pergunta": "Qual instância do aparelho psíquico freudiano opera estritamente sob o Princípio do Prazer, exigindo descarga imediata?",
         "opcoes": ["A) Superego", "B) Ego", "C) Id"],
         "correta": "C) Id",
-        "explicacao": "O Id é o reservatório pulsional inconsciente regeido unicamente pelo princípio do prazer, sem considerar a moral ou a realidade."
+        "explicacao": "O Id é o reservatório pulsional inconsciente regido unicamente pelo princípio do prazer."
     },
     {
         "nivel": "🔴 Complexo",
         "pergunta": "Como Wilfred Bion conceitua a conversão dos 'elementos beta' em 'elementos alfa' no processo analítico?",
         "opcoes": [
-            "A) Através da repressão secundária operada pelo superego sobre os traços visuais.",
+            "A) Através da repressão secundária operada pelo superego.",
             "B) Através da função alfa e do estado de reverie do analista, que atuam como continência metabolizadora de dados sensoriais brutos.",
             "C) Através da fixação da libido no estádio do espelho lacaniano."
         ],
         "correta": "B) Através da função alfa e do estado de reverie do analista, que atuam como continência metabolizadora de dados sensoriais brutos.",
-        "explicacao": "Bion demonstra que o analista empresta seu aparelho para pensar pensamentos para metabolizar as sensações brutas (beta) do paciente em formas pensáveis (alfa)."
+        "explicacao": "Bion demonstra que o analista empresta sua mente para metabolizar sensações brutas (beta) em pensamentos (alfa)."
     },
     {
         "nivel": "🟢 Simples",
         "pergunta": "O que caracteriza o conceito de 'Objeto Transicional' em Donald Winnicott?",
         "opcoes": [
-            "A) Um objeto físico (como um cobertor ou ursinho) que ajuda o bebê a fazer a ponte entre a onipotência e a realidade externa.",
-            "B) A representação mental rigorosa do pai durante o complexo de Édipo tardio.",
-            "C) Uma defesa neurótica contra a angústia de castração."
+            "A) Um objeto físico (como um cobertor) que ajuda o bebê a fazer a ponte entre a onipotência e a realidade externa.",
+            "B) A representação mental rigorosa do pai durante o complexo de Édipo.",
+            "C) Uma defesa neurótica contra a castração."
         ],
-        "correta": "A) Um objeto físico (como um cobertor ou ursinho) que ajuda o bebê a fazer a ponte entre a onipotência e a realidade externa.",
-        "explicacao": "O objeto transicional alivia a angústia de separação e constitui a primeira posse não-eu da criança."
+        "correta": "A) Um objeto físico (como um cobertor) que ajuda o bebê a fazer a ponte entre a onipotência e a realidade externa.",
+        "explicacao": "O objeto transicional alivia a angústia de separação e constitui a primeira posse não-eu."
     },
     {
         "nivel": "🔴 Complexo",
         "pergunta": "Qual a principal diferença entre a concepção do Édipo em Freud e na teoria de Melanie Klein?",
         "opcoes": [
-            "A) Freud defendia que o Édipo ocorre no primeiro mês, enquanto Klein dizia que ele só surge na velhice.",
-            "B) Freud situava o Édipo e o Superego na fase fálica (por volta dos 4-5 anos); Klein demonstrou que as defesas, a culpa e os bizarros contornos edípicos operam de forma muito mais precoce no primeiro ano de vida.",
-            "C) Klein descartava completamente a sexualidade infantil em sua metapsicologia."
+            "A) Freud defendia que o Édipo ocorre no primeiro mês, enquanto Klein dizia que na velhice.",
+            "B) Freud situava o Édipo na fase fálica (4-5 anos); Klein demonstrou que as defesas e a culpa operam de forma muito mais precoce no primeiro ano de vida.",
+            "C) Klein descartava completamente a sexualidade infantil."
         ],
-        "correta": "B) Freud situava o Édipo e o Superego na fase fálica (por volta dos 4-5 anos); Klein demonstrou que as defesas, a culpa e os bizarros contornos edípicos operam de forma muito mais precoce no primeiro ano de vida.",
-        "explicacao": "Klein antecipou cronologicamente a angústia edípica e a severidade superegoica para as fases orais e anais primitivas."
+        "correta": "B) Freud situava o Édipo na fase fálica (4-5 anos); Klein demonstrou que as defesas e a culpa operam de forma muito mais precoce no primeiro ano de vida.",
+        "explicacao": "Klein antecipou cronologicamente a angústia edípica para as fases orais e anais primitivas."
     },
     {
         "nivel": "🟢 Simples",
-        "pergunta": "O que Lacan quer dizer com a célebre frase: 'O inconsciente é estruturado como uma linguagem'?",
+        "pergunta": "O que Lacan quer dizer com a frase: 'O inconsciente é estruturado como uma linguagem'?",
         "opcoes": [
-            "A) Que o inconsciente pode ser aprendido em dicionários de inglês e francês.",
-            "B) Que o inconsciente obedece a leis linguísticas (como a metáfora e a metonímia) e opera através da cadeia significante.",
-            "C) Que os sonhos são apenas falhas gramaticais sem sentido."
+            "A) Que o inconsciente pode ser aprendido em dicionários.",
+            "B) Que o inconsciente obedece a leis linguísticas (metáfora e metonímia) e opera através da cadeia significante.",
+            "C) Que os sonhos são falhas gramaticais sem sentido."
         ],
-        "correta": "B) Que o inconsciente obedece a leis linguísticas (como a metáfora e a metonímia) e opera através da cadeia significante.",
-        "explicacao": "Lacan utiliza a linguística estrutural de Saussure para demonstrar que o inconsciente possui uma gramática própria."
+        "correta": "B) Que o inconsciente obedece a leis linguísticas (metáfora e metonímia) e opera através da cadeia significante.",
+        "explicacao": "Lacan utiliza a linguística estrutural para demonstrar que o inconsciente possui gramática própria."
     }
 ]
 
-# Inicialização do Histórico e Seleção de Perguntas no Session State se não existirem
+# Inicialização de estados na sessão
 if "quiz_perguntas" not in st.session_state:
     st.session_state.quiz_perguntas = random.sample(banco_quiz_total, min(5, len(banco_quiz_total)))
 if "historico_respostas" not in st.session_state:
@@ -154,14 +154,13 @@ if menu == "1. 🗺️ Arquitetura & Tribunal Teórico (com Áudio)":
         <h2>{autor_data['autor']}</h2>
         <p><strong>Papel Histórico:</strong> {autor_data['papel']}</p>
         <hr>
-        <p style="font-size: 16px; line-height: 1.6;"><strong>A Defesa Teórica (Rigof Metapsicológico):</strong><br>{autor_data['tese']}</p>
+        <p style="font-size: 16px; line-height: 1.6;"><strong>A Defesa Teórica:</strong><br>{autor_data['tese']}</p>
         <div class="analogia-box">
-            <strong>💡 Analogia Explicativa (Fácil Compreensão):</strong> {autor_data['analogia']}
+            <strong>💡 Analogia Explicativa:</strong> {autor_data['analogia']}
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Componente robusto de Áudio em JavaScript puro via Streamlit Components
     safe_text = autor_data['audio_texto'].replace('"', '\\"')
     audio_component = f"""
     <div>
@@ -177,12 +176,11 @@ if menu == "1. 🗺️ Arquitetura & Tribunal Teórico (com Áudio)":
     """
     st.components.v1.html(audio_component, height=60)
 
-# --- TÓPICO 2: QUIZ DINÂMICO (ATÉ 5 PERGUNTAS + BOTÃO DE NOVAS + HISTÓRICO) ---
+# --- TÓPICO 2: QUIZ DINÂMICO ---
 elif menu == "2. 🎯 Quiz Dinâmico (Até 5 Perguntas & Histórico)":
     st.subheader("Pilar 2: Quiz de Fixação Dinâmico (Níveis Simples e Complexos)")
-    st.markdown("Teste seus conhecimentos metapsicológicos. Responda às questões abaixo, valide com o botão de correção e verifique seu histórico.")
+    st.markdown("Teste seus conhecimentos metapsicológicos. Responda às questões abaixo e verifique seu histórico.")
 
-    # Botão para gerar novas perguntas
     col_btn1, col_btn2 = st.columns([2, 3])
     with col_btn1:
         if st.button("🔄 Trazer Novas Perguntas para o Quiz"):
@@ -191,7 +189,6 @@ elif menu == "2. 🎯 Quiz Dinâmico (Até 5 Perguntas & Histórico)":
 
     st.markdown("---")
 
-    # Renderização dinâmica das perguntas (máximo 5)
     for idx, q in enumerate(st.session_state.quiz_perguntas):
         st.markdown(f"### Q{idx+1} [{q['nivel']}] — {q['pergunta']}")
         resposta_usuario = st.radio("Escolha uma opção:", q["opcoes"], key=f"quiz_q_{idx}")
@@ -199,7 +196,6 @@ elif menu == "2. 🎯 Quiz Dinâmico (Até 5 Perguntas & Histórico)":
         if st.button(f"Corrigir Questão {idx+1}", key=f"btn_corrigir_{idx}"):
             acertou = resposta_usuario.startswith(q["correta"][:3])
             
-            # Registrar no histórico
             registro = {
                 "pergunta": q["pergunta"],
                 "escolha": resposta_usuario,
@@ -214,7 +210,6 @@ elif menu == "2. 🎯 Quiz Dinâmico (Até 5 Perguntas & Histórico)":
                 st.error(f"❌ **Incorreto.** A alternativa correta é: **{q['correta']}**.\n\n*{q['explicacao']}*")
         st.markdown("---")
 
-    # Seção do Histórico de Respostas
     if st.session_state.historico_respostas:
         with st.expander("📊 Ver Histórico de Respostas Acumulado na Sessão"):
             for h_idx, h in enumerate(st.session_state.historico_respostas):
@@ -229,14 +224,21 @@ elif menu == "2. 🎯 Quiz Dinâmico (Até 5 Perguntas & Histórico)":
                 st.session_state.historico_respostas = []
                 st.rerun()
 
-# --- TÓPICO 3: PAINEL DE CONSULTA AOS AUTORES & MEDIADOR (COM ORIENTAÇÃO PRÁTICA) ---
+# --- TÓPICO 3: PAINEL DE CONSULTA AOS AUTORES & MEDIADOR (COM ATUALIZAÇÃO CORRIGIDA) ---
 elif menu == "3. ⚖️ Painel de Consulta aos Autores & Mediador":
     st.subheader("Pilar 3: Painel de Consulta Aprofundada e Mediação Clínica")
     st.markdown("Insira uma situação clínica ou dúvida conceitual. O painel cruzará as perspectivas aprofundadas dos autores, trará diretrizes de **como agir** e concluirá com a avaliação do mediador.")
 
-    pergunta_usuario = st.text_input("Qual é a sua dúvida ou cenário clínico para análise do painel?", "Como manejar um paciente que apresenta angústia persecutória severa e recusa o vínculo?")
+    # Usando uma chave dinâmica associada a um botão de envio para forçar a atualização correta
+    with st.form(key="form_consulta_autores"):
+        pergunta_usuario = st.text_input(
+            "Qual é a sua dúvida ou cenário clínico para análise do painel?", 
+            value="Como manejar um paciente que apresenta angústia persecutória severa e recusa o vínculo?"
+        )
+        submit_button = st.form_submit_button(label="Consultar Painel Analítico e Mediador")
 
-    if st.button("Consultar Painel Analítico e Mediador"):
+    # A lógica executa sempre que o formulário for submetido, capturando perfeitamente o novo texto
+    if submit_button:
         st.markdown("---")
         st.markdown(f"### 💬 Análise Coletiva para: *'{pergunta_usuario}'*")
         
@@ -251,7 +253,7 @@ elif menu == "3. ⚖️ Painel de Consulta aos Autores & Mediador":
             st.markdown("""
             <div style="background-color:#F2F4F4; padding:15px; border-radius:8px; margin-bottom:12px;">
                 <strong>Melanie Klein:</strong><br>
-                <em>"Trata-se de uma recaída franca na posição esquizo-paranoide. O objeto externo está sendo clivado e vivido como persecutório e aniquilador devido à projeção massiva de impulsos destrutivos e pulsão de morte."</em>
+                <em>"Trata-se de uma recaída franca na posição esquizo-paranoide. O objeto externo está sendo clivado e vivido como persecutório devido à projeção massiva de impulsos destrutivos."</em>
             </div>
             """, unsafe_allow_html=True)
 
@@ -259,34 +261,32 @@ elif menu == "3. ⚖️ Painel de Consulta aos Autores & Mediador":
             st.markdown("""
             <div style="background-color:#F2F4F4; padding:15px; border-radius:8px; margin-bottom:12px;">
                 <strong>Donald Winnicott:</strong><br>
-                <em>"Encaro isso como uma falha severa na sustentação ambiental originária. O paciente não suporta o vínculo porque o ambiente inicial foi invasivo ou falho, gerando um Falso Self defensivo que desconfia de qualquer intimidade."</em>
+                <em>"Encaro isso como uma falha severa na sustentação ambiental originária. O paciente não suporta o vínculo porque o ambiente inicial foi falho, gerando um Falso Self defensivo."</em>
             </div>
             """, unsafe_allow_html=True)
             st.markdown("""
             <div style="background-color:#F2F4F4; padding:15px; border-radius:8px; margin-bottom:12px;">
                 <strong>Wilfred Bion:</strong><br>
-                <em>"Há um transbordamento maciço de elementos beta não metabolizados. O psiquismo do paciente está inundado de sensações brutas sem conseguir sonhá-las ou transformá-las em pensamentos."</em>
+                <em>"Há um transbordamento maciço de elementos beta não metabolizados. O psiquismo do paciente está inundado de sensações brutas sem conseguir sonhá-las."</em>
             </div>
             """, unsafe_allow_html=True)
 
-        # Campo de Como Agir na Prática
-        st.markdown("""
+        st.markdown(f"""
         <div class="pratica-box">
-            <h3>🧭 Diretriz Prática: Como Agir Diante Dessa Situação</h3>
+            <h3>🧭 Diretriz Prática: Como Agir Diante de "{pergunta_usuario[:30]}..."</h3>
             <p><strong>Conduta Clínica Recomendada:</strong></p>
             <ul>
-                <li><strong>Evite confrontações diretas:</strong> Não tente interpretar a lógica racional do paciente enquanto ele estiver tomado pela persecutoriedade (Klein/Freud).</li>
-                <li><strong>Exerça continência pura (Holding & Reverie):</strong> Torne-se um continente seguro. Mostre-se estável, previsível e tolerante ao caos emocional sem se assustar ou revidar (Winnicott/Bion).</li>
-                <li><strong>Respeite o tempo do vínculo:</strong> Permita que o paciente regrida no próprio ritmo, validando a dor do seu isolamento antes de introduzir qualquer intervenção analítica interpretativa.</li>
+                <li><strong>Evite confrontações diretas:</strong> Não tente argumentar racionalmente contra conteúdos persecutórios em momentos de pico de angústia (Freud/Klein).</li>
+                <li><strong>Exerça continência pura (Holding & Reverie):</strong> Sustenha o clima emocional de forma estável e previsível, servindo como continente para o caos (Winnicott/Bion).</li>
+                <li><strong>Respeite o ritmo do sujeito:</strong> Valide a dor do isolamento defensivo antes de propor qualquer interpretação teórica aprofundada.</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
 
-        # Conclusão do Mediador
         st.markdown("""
         <div class="mediador-box">
             <h3>⚖️ Conclusão do Mediador Psicanalítico (Síntese Avançada)</h3>
             <p><strong>Avaliação do Especialista:</strong><br>
-            A convergência entre os autores demonstra que quadros de persecutoriedade e recusa de vínculo não se resolvem com argumentação lógica, mas sim com <strong>presença, continência e moderação ambiental</strong>. Enquanto Freud e Klein explicam a raiz pulsional e defensiva do conflito, Winnicott e Bion fornecem a ferramenta terapêutica prática: o analista precisa emprestar sua própria mente e estabilidade para suportar o que o paciente ainda não consegue conter sozinho.</p>
+            A convergência entre os autores demonstra que situações de alta complexidade clínica não se resolvem por imposição teórica, mas pela <strong>escuta enraizada na transferência e na continência</strong>. Enquanto Freud e Klein identificam a raiz do conflito estrutural, Winnicott e Bion fornecem o mapa de atuação prática para que o analista suporte o peso do sofrimento psíquico do paciente.</p>
         </div>
         """, unsafe_allow_html=True)
