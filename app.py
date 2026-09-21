@@ -2,155 +2,149 @@ import streamlit as st
 
 # Configuração da Página
 st.set_page_config(
-    page_title="Plataforma Multimídia de Psicanálise",
+    page_title="Plataforma Imersiva de Psicanálise",
     page_icon="🧠",
     layout="wide"
 )
 
-# Estilização visual avançada e suporte a cartões
+# Estilização visual para os debates e mapas
 st.markdown("""
     <style>
     .main-header { font-size: 26px; font-weight: bold; color: #2C3E50; }
     .sub-header { font-size: 16px; color: #7F8C8D; }
-    .card-estudo { background-color: #F8F9FA; padding: 20px; border-radius: 10px; border-left: 6px solid #2471A3; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-    .mapa-central { background-color: #EBF5FB; padding: 20px; border-radius: 10px; border: 2px dashed #2980B9; text-align: center; font-weight: bold; font-size: 18px; color: #1B4F72; margin-bottom: 20px;}
-    .exemplo-pratico { background-color: #F4ECF7; padding: 10px 15px; border-radius: 6px; border-left: 4px solid #8E44AD; margin-top: 10px; font-size: 14px; }
+    .defesa-box { background-color: #F8F9FA; padding: 20px; border-radius: 10px; border-left: 6px solid #2980B9; margin-bottom: 20px; }
+    .analogia-box { background-color: #EBF5FB; padding: 12px 15px; border-radius: 6px; border-left: 4px solid #2471A3; margin-top: 12px; font-style: italic; color: #1B4F72; }
+    .mapa-central { background-color: #F4ECF7; padding: 20px; border-radius: 10px; border: 2px dashed #8E44AD; text-align: center; font-weight: bold; font-size: 18px; color: #512E5F; margin-bottom: 20px;}
     </style>
 """, unsafe_allow_html=True)
 
-# Base de Dados Completa com Exemplos Práticos e Textos de Áudio
-base_autores_multimidia = [
+# Base de Defesas Teóricas (Autores em 1ª pessoa com termos técnicos e analogias)
+base_defesas = [
     {
-        "nome": "Sigmund Freud",
-        "papel": "Fundador / Pai da Psicanálise",
-        "conceito": "Inconsciente, Aparelho Psíquico (Id, Ego, Superego) e Repressão.",
-        "exemplo": "Um profissional que sofre de exaustão crônica, mas se recusa a descansar porque o Superego exige perfeição constante, demonstrando o conflito entre o desejo inconsciente de pausa e a cobrança moral interna.",
-        "audio_texto": "Sigmund Freud é o fundador da psicanálise. Seu foco central é o inconsciente e o aparelho psíquico dividido entre Id, Ego e Superego."
+        "autor": "Sigmund Freud",
+        "papel": "Fundador da Psicanálise",
+        "tese": "O psiquismo não se reduz à consciência; sou implacável ao afirmar que o aparelho psíquico é regido por conflitos tópicos e econômicos entre o Id, o Ego e o Superego, onde a repressão atua como guardiã da moralidade contra a pulsão.",
+        "analogia": "O psiquismo é como um iceberg econômico: a consciência é apenas a ponta visível, enquanto a imensa massa submersa do inconsciente dita a direção das correntes por meio de pressões energéticas constantes.",
+        "audio_texto": "Sigmund Freud defende que o psiquismo é regido pelo conflito entre Id, Ego e Superego, operando através de forças inconscientes."
     },
     {
-        "nome": "Melanie Klein",
-        "papel": "Pioneira da Psicanálise Infantil e Relações Objetais",
-        "conceito": "Posições Esquizo-paranoide e Depressiva, Fantasia Inconsciente.",
-        "exemplo": "Uma pessoa que, ao menor sinal de erro de um colega de trabalho, passa a enxergá-lo como 'totalmente péssimo', refletindo a clivagem da posição esquizo-paranoide.",
-        "audio_texto": "Melanie Klein reformulou as bases Kleinianas focando nas posições mentais primitivas e na fantasia inconsciente do bebê."
+        "autor": "Melanie Klein",
+        "papel": "Pioneira das Relações Objetais",
+        "tese": "O psiquismo infantil é um teatro de crueldades primitivas. Sustento que a mente opera desde o nascimento dividida entre a posição esquizo-paranoide — marcada pela clivagem do objeto em total bom ou totalmente mau — e a dolorosa passagem para a posição depressiva.",
+        "analogia": "É como um caleidoscópio emocional na infância: o bebê ora enxerga o mundo em estilhaços de aniquilação total (bom versus mau absoluto), ora tenta colar os pedaços quando descobre que quem nutre é o mesmo que frustra.",
+        "audio_texto": "Melanie Klein argumenta que a mente se organiza nas posições esquizo-paranoide e depressiva através de fantasias inconscientes precoces."
     },
     {
-        "nome": "Donald Winnicott",
-        "papel": "Escola Inglesa / Teoria do Amparo",
-        "conceito": "Mãe Suficientemente Boa, Objeto Transicional e Falso Self.",
-        "exemplo": "O uso de um cobertor de apego ou um objeto de conforto por uma criança (ou o ritual de café de um adulto) para aplacar a angústia de separação e transição.",
-        "audio_texto": "Donald Winnicott destacou a importância do ambiente facilitador, cunhando o conceito de objeto transicional e falso self."
+        "autor": "Donald Winnicott",
+        "papel": "Teórico do Amparo e Ambiente",
+        "tese": "Eu vos digo que um bebê isolado não existe; o que existe é uma matriz vincular inseparável. O desenvolvimento saudável depende de um ambiente facilitador provido por uma mãe suficientemente boa, que sustenta o ego imaturo do infante por meio do holding.",
+        "analogia": "O ambiente emocional é como o oxigênio em um mergulho: quando a adaptação materna é fina e contínua, a criança nem percebe a estrutura que a protege, respirando autonomia sem notar o cilindro de suporte.",
+        "audio_texto": "Donald Winnicott defende que o sujeito se constitui a partir da mãe suficientemente boa e do ambiente facilitador."
     },
     {
-        "nome": "Wilfred Bion",
-        "papel": "Teórico dos Processos Grupais e do Pensar",
-        "conceito": "Função Alfa, Reverie e Elementos Beta.",
-        "exemplo": "Um aluno que chega à sessão de treino extremamente ansioso e irritado sem motivo aparente; o treinador/terapeuta acolhe essa carga bruta (reverie) e a devolve organizada e calma.",
-        "audio_texto": "Wilfred Bion estudou como a mente metaboliza dados sensoriais brutos, os elementos beta, transformando-os em pensamentos através da função alfa."
+        "autor": "Wilfred Bion",
+        "papel": "Teorizador do Pensar e dos Grupos",
+        "tese": "A mente é um aparelho para pensar os pensamentos. O indivíduo nasce incapaz de metabolizar dados sensoriais brutos — os elementos beta. É necessária a função alfa do analista, operando em reverie, para transformar essa matéria tóxica em elementos alfa pensáveis.",
+        "analogia": "O analista funciona como um estômago psíquico ou um filtro biológico: recebe os detritos emocionais indigestos e caóticos do paciente, os metaboliza com continente carinhoso e técnico, e os devolve em nutrientes assimiláveis.",
+        "audio_texto": "Wilfred Bion explica que a mente metaboliza elementos beta em alfa através da função de continência e reverie."
     },
     {
-        "nome": "Jacques Lacan",
-        "papel": "O Retorno a Freud (Estruturalismo)",
-        "conceito": "O Inconsciente estruturado como linguagem, Estádio do Espelho e os Três Registros (RSI).",
-        "exemplo": "Um lapso de linguagem (ato falhado) em uma reunião de negócios que revela exatamente o desejo oculto que a pessoa tentava esconder.",
-        "audio_texto": "Jacques Lacan uniu a psicanálise à linguística, afirmando que o inconsciente é estruturado como uma linguagem."
-    },
-    {
-        "nome": "André Green",
-        "papel": "Psicanálise Contemporânea Francesa",
-        "conceito": "Narcisismo de Morte e Afetos Negativos.",
-        "exemplo": "Pacientes que entram em estados de apatia profunda e desligamento emocional diante de perdas, operando sob o esvaziamento do narcisismo.",
-        "audio_texto": "André Green atualizou a metapsicologia para focar nas patologias do vazio e no narcisismo de morte."
+        "autor": "Jacques Lacan",
+        "papel": "O Retorno a Freud (Estruturalista)",
+        "tese": "Recuso o biologismo raso! O inconsciente é estruturado como uma linguagem. O sujeito nasce prematuro e se constitui no estádio do espelho, enredado na cadeia de significantes do Grande Outro, onde o desejo é sempre o desejo do Outro.",
+        "analogia": "O ser humano é como um ator que entra em um palco onde o roteiro, o figurinista e a língua já foram escritos antes dele; nós falamos a linguagem, mas somos falados pelas estruturas simbólicas que nos antecedem.",
+        "audio_texto": "Jacques Lacan postula que o inconsciente é estruturado como uma linguagem e que o sujeito se aliena na cadeia significante."
     }
 ]
 
-# Menu de Navegação na Barra Lateral
-st.sidebar.markdown("### Navegação Multimídia")
+# Menu Lateral
+st.sidebar.markdown("### Navegação Imersiva")
 menu = st.sidebar.radio("Escolha o Módulo:", [
-    "🗺️ Mapa Central: Psicanálise & Autores", 
-    "🃏 Cards de Estudo com Exemplos & Áudio", 
-    "🎯 Quiz Interativo com Gabarito"
+    "🗺️ Mapa Central: Psicanálise em Rede", 
+    "🗣️ Tribunal Teórico (Defesas dos Autores)", 
+    "🃏 Cards de Estudo com Áudio & Prática"
 ])
 
-st.markdown("<p class='main-header'>🧠 Plataforma Multimídia de Psicanálise</p>", unsafe_allow_html=True)
-st.markdown("<p class='sub-header'>Estude com mapas conceituais estruturados, exemplos práticos do cotidiano e recursos de voz.</p>", unsafe_allow_html=True)
+st.markdown("<p class='main-header'>🧠 Plataforma Imersiva de Psicanálise</p>", unsafe_allow_html=True)
+st.markdown("<p class='sub-header'>Explore mapas conceituais e assista aos autores defendendo suas teses com rigor técnico e analogias.</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 # --- MÓDULO 1: MAPA MENTAL CENTRALIZADO ---
-if menu == "🗺️ Mapa Central: Psicanálise & Autores":
+if menu == "🗺️ Mapa Central: Psicanálise em Rede":
     st.subheader("🗺️ Mapa Mental: A Psicanálise no Centro")
-    st.markdown("Esquema visual interativo mostrando a irradiação dos conceitos a partir da matriz psicanalítica.")
+    st.markdown("Esquema visual mostrando como o núcleo psicanalítico irradia para as diferentes escolas teóricas.")
 
     st.markdown("""
     <div class="mapa-central">
-        🎯 PSICANÁLISE (O Inconsciente e a Dinâmica Subjetiva)
+        🎯 NÚCLEO: PSICANÁLISE<br>
+        <span style="font-size: 14px; font-weight: normal; color: #4A235A;">(O Inconsciente, o Conflito e a Subjetividade)</span>
     </div>
     """, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("### 🏛️ Eixo Clássico / Fundacional")
+        st.markdown("### 🏛️ Eixo Fundacional e Escola Inglesa")
         st.markdown("""
-        - **Sigmund Freud** ➔ *Aparelho Psíquico & Pulsão*
-        - **Melanie Klein** ➔ *Posições Psíquicas Primitivas*
-        - **Donald Winnicott** ➔ *Ambiente & Objeto Transicional*
-        - **Wilfred Bion** ➔ *Função Alfa & Continência*
-        - **Jacques Lacan** ➔ *Incordiente como Linguagem*
+        - **Sigmund Freud** ➔ *Tópicas, Aparelho Psíquico & Repressão*
+        - **Melanie Klein** ➔ *Posições Primitivas & Fantasia Inconsciente*
+        - **Donald Winnicott** ➔ *Holding, Ambiente & Objeto Transicional*
+        - **Wilfred Bion** ➔ *Função Alfa, Reverie & Elementos Beta*
         """)
 
     with col2:
-        st.markdown("### 🌐 Eixo Contemporâneo")
+        st.markdown("### 🌐 Eixo Estrutural e Contemporâneo")
         st.markdown("""
+        - **Jacques Lacan** ➔ *Inconsciente como Linguagem & RSI*
         - **André Green** ➔ *Narcisismo de Morte & Vazio*
         - **Thomas Ogden** ➔ *Terceiro Analítico Intersubjetivo*
         - **Christopher Bollas** ➔ *O Conhecido Não Pensado*
-        - **Antonino Ferro** ➔ *O Analista como Co-criador*
-        - **René Roussillon** ➔ *Impasses da Simbolização*
         """)
 
-# --- MÓDULO 2: CARDS DE ESTUDO COM EXEMPLOS E ÁUDIO (TEXT-TO-SPEECH) ---
-elif menu == "🃏 Cards de Estudo com Exemplos & Áudio":
-    st.subheader("🃏 Cards de Estudo: Teoria + Exemplo Prático + Áudio")
-    st.markdown("Cada card traz a síntese do autor, um exemplo real de como isso acontece e um player de voz embutido.")
+# --- MÓDULO 2: TRIBUNAL TEÓRICO (DEFESAS EM 1ª PESSOA) ---
+elif menu == "🗣️ Tribunal Teórico (Defesas dos Autores)":
+    st.subheader("🗣️ Tribunal Teórico: Os Autores em Defesa de Suas Teses")
+    st.markdown("Leia as argumentações técnicas e as analogias elaboradas por cada grande teólogo da psique humana.")
 
-    for i, item in enumerate(base_autores_multimidia):
+    autor_selecionado = st.selectbox("Escolha o autor para ouvir a defesa:", [a["autor"] for a in base_defesas])
+
+    # Encontrar dados do autor escolhido
+    autor_data = next(a for a in base_defesas if a["autor"] == autor_selecionado)
+
+    st.markdown(f"""
+    <div class="defesa-box">
+        <h2>{autor_data['autor']}</h2>
+        <p><strong>Papel Histórico:</strong> {autor_data['papel']}</p>
+        <hr>
+        <p style="font-size: 16px; line-height: 1.6;"><strong>A Defesa Teórica (Termos Técnicos):</strong><br>"{autor_data['tese']}"</p>
+        
+        <div class="analogia-box">
+            <strong>💡 Analogia Explicativa:</strong> "{autor_data['analogia']}"
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Botão de Áudio (Text-to-Speech) integrado para o celular ou PC
+    safe_text = autor_data['audio_texto'].replace("'", "").replace('"', "")
+    audio_html = f"""
+        <button onclick="
+            var utterance = new SpeechSynthesisUtterance('{safe_text}');
+            utterance.lang = 'pt-BR';
+            window.speechSynthesis.speak(utterance);
+        " style="background-color: #2E4053; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 15px;">
+            🔊 Ouvir Defesa do Autor em Áudio
+        </button>
+    """
+    st.markdown(audio_html, unsafe_allow_html=True)
+
+# --- MÓDULO 3: CARDS DE ESTUDO MULTIMÍDIA ---
+elif menu == "🃏 Cards de Estudo com Áudio & Prática":
+    st.subheader("🃏 Cards de Estudo e Síntese Conceitual")
+    for item in base_defesas:
         st.markdown(f"""
-        <div class="card-estudo">
-            <h3>{item['nome']}</h3>
-            <p><strong>Papel:</strong> {item['papel']}</p>
-            <p><strong>Conceito-Chave:</strong> {item['conceito']}</p>
-            <div class="exemplo-pratico">
-                <strong>💡 Exemplo Prático de Como Acontece:</strong> {item['exemplo']}
-            </div>
+        <div style="background-color: #F8F9FA; padding: 15px; border-radius: 8px; border-left: 5px solid #1B4F72; margin-bottom: 15px;">
+            <h4>{item['nome'] if 'nome' in item else item['autor']}</h4>
+            <p><strong>Tese Central:</strong> {item['tese']}</p>
+            <p><strong>Analogia:</strong> {item['analogia']}</p>
         </div>
         """, unsafe_allow_html=True)
-
-        # Recurso nativo de HTML5 Audio/Speech para o celular e navegador falarem o texto estruturado
-        # Usamos a API de síntese de fala integrada do navegador web (funciona perfeitamente em mobile e PC)
-        safe_text = item['audio_texto'].replace("'", "").replace('"', "")
-        audio_html = f"""
-            <button onclick="
-                var utterance = new SpeechSynthesisUtterance('{safe_text}');
-                utterance.lang = 'pt-BR';
-                window.speechSynthesis.speak(utterance);
-            " style="background-color: #2E4053; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 14px; margin-bottom: 25px;">
-                🔊 Ouvir Resumo em Áudio ({item['nome']})
-            </button>
-        """
-        st.markdown(audio_html, unsafe_allow_html=True)
-
-# --- MÓDULO 3: QUIZ COM GABARITO EXPLICATIVO ---
-elif menu == "🎯 Quiz Interativo com Gabarito":
-    st.subheader("🎯 Simulador de Fixação Teórica")
-    
-    q1 = st.radio(
-        "1. Qual autor introduziu o conceito de 'Objeto Transicional' para descrever o item (como um paninho ou ursinho) que acolhe a angústia de separação do bebê?",
-        ["A) Sigmund Freud", "B) Donald Winnicott", "C) Jacques Lacan", "D) André Green"],
-        key="q_quiz_1"
-    )
-    if st.button("Conferir Resposta do Quiz"):
-        if q1.startswith("B)"):
-            st.success("✅ **Correto!** Winnicott criou o conceito de objeto transicional como a zona intermediária de experiência entre o bebê e o mundo externo.")
-        else:
-            st.error("❌ **Incorreto.** Revise os cards de Donald Winnicott.")
